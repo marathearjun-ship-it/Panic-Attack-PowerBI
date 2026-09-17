@@ -1,0 +1,277 @@
+table PANIC_ATTACK_DATA
+	lineageTag: 95fce26e-f6ad-49ee-9150-f95bcf82bcfe
+
+	measure '% Patients Diziness' = ```
+			
+			    DIVIDE(
+			        COUNTROWS(
+			                FILTER('PANIC_ATTACK_DATA', PANIC_ATTACK_DATA[DIZZINESS] = TRUE())),
+			        COUNTROWS('PANIC_ATTACK_DATA'), 
+			        0
+			    ) 
+			```
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 44bf540c-d5ad-4738-9137-c4eb80faf0d4
+
+	column ID
+		dataType: int64
+		lineageTag: 4706a7be-6fee-4fa1-88bb-3d7f75afba5e
+		summarizeBy: count
+		sourceColumn: ID
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column AGE
+		dataType: int64
+		lineageTag: d3df7fab-ad93-4424-8db4-d7ce17c9a94a
+		summarizeBy: sum
+		sourceColumn: AGE
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column GENDER
+		dataType: string
+		lineageTag: bb39f753-7fa6-4300-8069-88f2da12e57a
+		summarizeBy: none
+		sourceColumn: GENDER
+
+		annotation SummarizationSetBy = Automatic
+
+	column PANIC_ATTACK_FREQUENCY
+		dataType: int64
+		lineageTag: 328cfb85-498a-4f8f-bac6-620366553d2a
+		summarizeBy: sum
+		sourceColumn: PANIC_ATTACK_FREQUENCY
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column DURATION_MINUTES
+		dataType: int64
+		lineageTag: af268148-7b5b-4f96-a993-3c02ff26f122
+		summarizeBy: sum
+		sourceColumn: DURATION_MINUTES
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column TRIGGER_REASON
+		dataType: string
+		lineageTag: 24fe4ae2-701e-417a-b20c-db1ab73b9a23
+		summarizeBy: none
+		sourceColumn: TRIGGER_REASON
+
+		annotation SummarizationSetBy = Automatic
+
+	column HEART_RATE
+		dataType: double
+		lineageTag: 72178855-3302-4b67-bb93-9e931673f815
+		summarizeBy: sum
+		sourceColumn: HEART_RATE
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column SWEATING
+		dataType: string
+		lineageTag: e645031d-a3c7-4bd9-af00-3f7d928b5807
+		summarizeBy: none
+		sourceColumn: SWEATING
+
+		annotation SummarizationSetBy = Automatic
+
+	column SHORTNESS_OF_BREATH
+		dataType: string
+		lineageTag: df433be5-86e6-4312-9fd8-2e619cee42dd
+		summarizeBy: none
+		sourceColumn: SHORTNESS_OF_BREATH
+
+		annotation SummarizationSetBy = Automatic
+
+	column DIZZINESS
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 48247c94-b393-4f3e-8d83-90fc2f287b76
+		summarizeBy: none
+		sourceColumn: DIZZINESS
+
+		annotation SummarizationSetBy = Automatic
+
+	column CHEST_PAIN
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 3825ac5d-ba68-4737-971c-27984f16a6d5
+		summarizeBy: none
+		sourceColumn: CHEST_PAIN
+
+		annotation SummarizationSetBy = Automatic
+
+	column TREMBLING
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 00072aeb-b4f7-46ee-a269-b049e76402e2
+		summarizeBy: none
+		sourceColumn: TREMBLING
+
+		annotation SummarizationSetBy = Automatic
+
+	column MEDICAL_HISTORY
+		dataType: string
+		lineageTag: 20c026ac-079c-4ee3-97d0-1b6bddd2c166
+		summarizeBy: none
+		sourceColumn: MEDICAL_HISTORY
+
+		annotation SummarizationSetBy = Automatic
+
+	column MEDICATION
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 7cf4aa4d-4cef-4b48-9d76-41acdb95fffa
+		summarizeBy: none
+		sourceColumn: MEDICATION
+
+		annotation SummarizationSetBy = Automatic
+
+	column CAFFEINE_INTAKE
+		dataType: int64
+		lineageTag: 8471846c-fb44-4e53-aaa2-f09f010603b6
+		summarizeBy: sum
+		sourceColumn: CAFFEINE_INTAKE
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column EXERCISE_FREQUENCY
+		dataType: int64
+		lineageTag: c95123ab-cbbf-40eb-a5bb-b1f25df6d215
+		summarizeBy: sum
+		sourceColumn: EXERCISE_FREQUENCY
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column SLEEP_HOURS
+		dataType: double
+		lineageTag: e3c004da-7bbc-4366-942b-34c9051358a3
+		summarizeBy: sum
+		sourceColumn: SLEEP_HOURS
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ALCOHOL_CONSUMPTION
+		dataType: int64
+		lineageTag: 853dd96a-5a8e-4b85-a8fd-5c7913c34dbc
+		summarizeBy: sum
+		sourceColumn: ALCOHOL_CONSUMPTION
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column SMOKING
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 24aed10b-db9b-478f-b0e8-3b27d70f99cf
+		summarizeBy: none
+		sourceColumn: SMOKING
+
+		annotation SummarizationSetBy = Automatic
+
+	column THERAPY
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 09182ae1-eab7-4ad3-ba9e-a93f7fe33932
+		summarizeBy: none
+		sourceColumn: THERAPY
+
+		annotation SummarizationSetBy = Automatic
+
+	column PANIC_SCORE
+		dataType: int64
+		lineageTag: 5fef7c3e-0dc8-4ff0-a9d2-5b6fd4df07a5
+		summarizeBy: sum
+		sourceColumn: PANIC_SCORE
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Panic Score (HML)'
+		dataType: string
+		lineageTag: d8856475-2b29-4928-88d7-6c94ea739d43
+		summarizeBy: none
+		sourceColumn: Panic Score (HML)
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Age Group IF' = ```
+			
+			    IF(
+			        'PANIC_ATTACK_DATA'[AGE]<= 17, "Child",
+			            IF(
+			                'PANIC_ATTACK_DATA'[AGE]<= 24, "Adolecient",
+			                    IF(
+			                        'PANIC_ATTACK_DATA'[AGE]<= 64, "Adult",
+			                            "Senior"
+			                    )
+			            )
+			    )
+			```
+		lineageTag: 1e21f07e-487d-42c1-b6ee-3b78cd3180da
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Age Group Switch' = ```
+			
+			    SWITCH(
+			        TRUE(),
+			        'PANIC_ATTACK_DATA'[AGE] <= 17, "Child",
+			        'PANIC_ATTACK_DATA'[AGE] <= 24, "Adolecent",
+			        'PANIC_ATTACK_DATA'[AGE] <= 64, "Adult",
+			        "Senior"
+			    )
+			```
+		lineageTag: 99a2f93c-5322-4529-bb2c-0805de3099ad
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	partition PANIC_ATTACK_DATA = m
+		mode: import
+		source =
+				let
+				    Source = Snowflake.Databases("LZOSSCA-BH81235.snowflakecomputing.com","COMPUTE_WH",[Implementation="1.0"]),
+				    POWERBIPROJECT_Database = Source{[Name="POWERBIPROJECT",Kind="Database"]}[Data],
+				    PUBLIC_Schema = POWERBIPROJECT_Database{[Name="PUBLIC",Kind="Schema"]}[Data],
+				    PANIC_ATTACK_DATA_Table = PUBLIC_Schema{[Name="PANIC_ATTACK_DATA",Kind="Table"]}[Data],
+				    #"Changed Type" = Table.TransformColumnTypes(PANIC_ATTACK_DATA_Table,{{"ID", Int64.Type}, {"AGE", Int64.Type}, {"PANIC_ATTACK_FREQUENCY", Int64.Type}, {"DURATION_MINUTES", Int64.Type}, {"HEART_RATE", Int64.Type}, {"SWEATING", type logical}, {"CAFFEINE_INTAKE", Int64.Type}, {"EXERCISE_FREQUENCY", Int64.Type}, {"ALCOHOL_CONSUMPTION", Int64.Type}, {"PANIC_SCORE", Int64.Type}}),
+				    #"Changed Type1" = Table.TransformColumnTypes(#"Changed Type",{{"SWEATING", type text}}),
+				    #"Replaced Value" = Table.ReplaceValue(#"Changed Type1","true","1",Replacer.ReplaceText,{"SWEATING"}),
+				    #"Replaced Value1" = Table.ReplaceValue(#"Replaced Value","false","0",Replacer.ReplaceText,{"SWEATING"}),
+				    #"Changed Type2" = Table.TransformColumnTypes(#"Replaced Value1",{{"SHORTNESS_OF_BREATH", type text}}),
+				    #"Replaced Value2" = Table.ReplaceValue(#"Changed Type2","true","1",Replacer.ReplaceText,{"SHORTNESS_OF_BREATH"}),
+				    #"Replaced Value3" = Table.ReplaceValue(#"Replaced Value2","false","0",Replacer.ReplaceText,{"SHORTNESS_OF_BREATH"}),
+				    #"Sorted Rows" = Table.Sort(#"Replaced Value3",{{"PANIC_SCORE", Order.Descending}}),
+				    #"Added Conditional Column" = Table.AddColumn(#"Sorted Rows", "Panic Score (HML)", each if [PANIC_SCORE] < 4 then "Low" else if [PANIC_SCORE] > 8 then "High" else "Medium"),
+				    #"Changed Type3" = Table.TransformColumnTypes(#"Added Conditional Column",{{"Panic Score (HML)", type text}}),
+				    #"Filtered Rows" = Table.SelectRows(#"Changed Type3", each true),
+				    #"Subtracted from Column" = Table.TransformColumns(#"Filtered Rows", {{"HEART_RATE", each _ - 1, type number}})
+				in
+				    #"Subtracted from Column"
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+
